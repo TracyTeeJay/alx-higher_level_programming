@@ -4,6 +4,8 @@ number = random.randint(-10000, 10000)
 
 if number < 0:
     posNumber = number * -1
+else:
+    posNumber = number
 lastDig = posNumber % 10
 
 if lastDig > 5:
