@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 import add_0
-a = 1
-b = 2
+if __name__ == "__main__":
+    
+    a = 1
+    b = 2
 
-sum = add_0.add(a, b)
+    sum = add_0.add(a, b)
 
-print("{} + {} = {}".format(a, b, sum))
+    print("{} + {} = {}".format(a, b, sum))
+    
