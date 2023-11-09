@@ -8,4 +8,4 @@ def uniq_add(my_list=[]):
     for ints in set_list:
         sum += ints
 
-    return(sum)
+    return (sum)
