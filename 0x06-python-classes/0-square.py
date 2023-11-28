@@ -6,6 +6,7 @@ this module contains a calss with the name: square
 
 """
 
+
 class Square:
     """
 
@@ -13,4 +14,4 @@ class Square:
 
     """
 
-pass
+    pass
