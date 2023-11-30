@@ -5,7 +5,7 @@ function to define a class: Rectangle
 """
 
 
-class Rectangle:
+class Rectangle():
     """
     represents class Rectangle
     """
