@@ -4,8 +4,6 @@
 function that returns dictionary description for JSON serialized object
 """
 
-import json
-
 
 def class_to_json(obj):
     """
