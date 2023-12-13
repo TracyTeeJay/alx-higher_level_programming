@@ -83,5 +83,47 @@ class Rectangle(Base):
         if type(value) is not int:
             Rectangle.raiseNotIntegerError("y")
         if value < 0:
-            Rectangle.raiseValueLessThanOrEqualToZeroError
+            Rectangle.raiseValueLessThanZeroError
         self.__y = value
+
+    @staticmethod
+    def raiseNotIntegerError(propName):
+        """
+        raise a TypeError when a non integer is input
+        """
+        raise TypeError("{} must be an integer".format(propName))
+
+    @staticmethod
+    def raiseValueLessThanOrEqualToZeroError(propName):
+        """
+        raise a ValueError when a negative or zero is input
+        """
+        raise ValueError("{} must be > 0".format(propName))
+
+    @staticmethod
+    def raiseValueLessThanZeroError(propName):
+        """
+        raises a ValueError when a negative number is input
+        """
+        raise ValueError("{} must be >= 0".format(propName))
+
+    def area(self):
+        """
+        calculates area of rectangle
+        Args:
+        height (int):
+        width (int):
+        """
+        return (self.__width * self.__height)
+
+    def display(self):
+        """
+        prints out the instance Rectangle with the character '#'
+        """
+        for cnt in range (self.__y):
+            print()
+
+        lineR = "#" * self.__width
+        spaceR = " " * self.__x
+        for cnt in range(self.__height):
+            print(spaceR + lineR)
