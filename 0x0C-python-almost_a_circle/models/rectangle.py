@@ -127,3 +127,10 @@ class Rectangle(Base):
         spaceR = " " * self.__x
         for cnt in range(self.__height):
             print(spaceR + lineR)
+
+    def __str__(self):
+         """
+         return a string representation of the instance Rectangle
+         """
+         return f"[Rectangle] ({self.id}) {self.x}/{self.y}-"\
+             f"{self.width}/{self.height}"
