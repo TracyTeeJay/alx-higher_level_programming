@@ -135,7 +135,7 @@ class Rectangle(Base):
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - "\
             f"{self.width}/{self.height}"
 
-    def upDate(self, *args, **kwargs):
+    def update(self, *args, **kwargs):
         """
         function to update attributes ofRectangle in order
         """
