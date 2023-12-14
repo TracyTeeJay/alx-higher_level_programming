@@ -9,7 +9,7 @@ class Base:
     """
     has the following:
     Attributes:
-    __init__(self, id=None): 
+    __init__(self, id=None):
     """
 
     __nb_objects = 0
