@@ -134,3 +134,29 @@ class Rectangle(Base):
         """
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - "\
             f"{self.width}/{self.height}"
+
+    def upDate(self, *args, **kwargs):
+        """
+        function to update attributes ofRectangle in order
+        """
+        for key, value in enumerate(args):
+            if key == 0:
+                self.id = value
+            elif key == 1:
+                self.width = value
+            elif key == 2:
+                self.height = value
+            elif key == 3:
+                self.x = value
+            elif key == 4:
+                self.y = value
+
+        for key, value in kwargs.items():
+            if key == "id":
+                self.id = value
+            elif key == "width":
+                self.width = value
+            elif key == "x":
+                self.x = value
+            elif key == "y":
+                self.y == value
