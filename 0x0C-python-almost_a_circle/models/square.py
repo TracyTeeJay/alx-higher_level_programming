@@ -61,3 +61,15 @@ class Square(Rectangle):
                 self.x = value
             elif key == "y":
                 self.y = value
+
+    def to_dictionary(self):
+        """
+        reurns a dict representation of the instance Square
+        """
+        square_dict = {}
+        square_dict["id"] = self.id
+        square_dict["size"] = self.size
+        square_dict["x"] = self.x
+        square_dict["y"] = self.y
+
+        return square_dict
