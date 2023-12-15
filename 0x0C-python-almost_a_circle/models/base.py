@@ -54,3 +54,12 @@ class Base:
                 string = cls.to_json_string(list_dict)
 
                 file.write(string)
+
+    def from_json_string(json_string):
+        """
+        deserializes from json format to string
+        """
+        if json_string is None or json_string == "":
+            return []
+
+        return json.loads(json_string)
