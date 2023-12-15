@@ -34,3 +34,30 @@ class Square(Rectangle):
         """ return a string representation of this instance """
 
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+
+    def update(self, *args, **kwargs):
+        """
+        function to update attributes of Square in order
+        """
+        for key, value in enumerate(args):
+            if key == 0:
+                self.id = value
+            elif key == 1:
+                self.size = value
+            elif key == 2:
+                self.x = value
+            elif key == 3:
+                self.y = value
+
+        if len(args):
+            return
+
+        for key, value in kwargs.items():
+            if key == "id":
+                self.id = value
+            elif key == "size":
+                self.size = value
+            elif key == "x":
+                self.x = value
+            elif key == "y":
+                self.y = value
