@@ -55,6 +55,7 @@ class Base:
 
                 file.write(string)
 
+    @staticmethod
     def from_json_string(json_string):
         """
         deserializes from json format to string
@@ -63,3 +64,20 @@ class Base:
             return []
 
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        create an instance of class
+        """
+        if issubclass(cls, Base):
+            if cls.__name__ == "Base":
+                return Base(dictionary.get("id", None))
+
+            if cls.__name__ == "Square":
+                obj = cls(1)
+            else:
+                obj = cls(1, 1)
+
+            obj.update(**dictionary)
+            return obj
