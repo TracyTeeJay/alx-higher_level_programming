@@ -5,6 +5,7 @@ contains class called Base
 """
 
 import json
+import os
 
 
 class Base:
@@ -81,3 +82,20 @@ class Base:
 
             obj.update(**dictionary)
             return obj
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        function to load return a list of instances from file
+        """
+
+        filename = f"{cls.__name__}.json"
+        if not os.path.exists(filename):
+            return []
+
+        with open(filename, "r") as file:
+            json_string = file.read()
+
+            dict_list = cls.from_json_string(json_string)
+
+            return [cls.create(**i) for i in dict_list]
