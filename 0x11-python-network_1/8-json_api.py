@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-A script whose input is a letter sends POST request with the letter as parameter
+A script whose input is a letter sends POST request with the it as parameter
 """
+
 import sys
 import requests
 
